@@ -1,5 +1,5 @@
 import { DarkenOnHoverModule } from './../../shared/directives/darken-on-hover/darken-on-hover.module';
-import { CardModule } from './../../shared/components/card.module';
+import { CardModule } from '../../shared/components/card/card.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
