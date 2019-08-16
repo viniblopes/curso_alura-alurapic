@@ -22,6 +22,8 @@ export class SignInComponent implements OnInit {
       userName: ['', Validators.required],
       password: ['', Validators.required]
     });
+    this.platformDetectorService.isPlatformBrowser() &&
+      this.userNameInput.nativeElement.focus();
   }
   login() {
     const userName = this.loginForm.get('userName').value;
@@ -35,9 +37,8 @@ export class SignInComponent implements OnInit {
       err => {
         console.log(' err ');
         console.log(err);
-        if (this.platformDetectorService.isPlatformBrowser()) {
+        this.platformDetectorService.isPlatformBrowser() &&
           this.userNameInput.nativeElement.focus();
-        }
         this.loginForm.reset();
       }
     );
