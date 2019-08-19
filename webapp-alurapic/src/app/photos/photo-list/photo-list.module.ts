@@ -9,6 +9,7 @@ import { PhotoListComponent } from './photo-list.component';
 import { LoadButtonComponent } from './load-button/load-button.component';
 import { FilterByDescription } from './filterByDescription.pipe';
 import { SearchComponent } from './search/search.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,6 @@ import { SearchComponent } from './search/search.component';
     FilterByDescription,
     SearchComponent
   ],
-  imports: [CommonModule, PhotoModule, CardModule, DarkenOnHoverModule]
+  imports: [CommonModule, PhotoModule, CardModule, RouterModule]
 })
 export class PhotoListModule {}
